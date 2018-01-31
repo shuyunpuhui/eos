@@ -82,7 +82,8 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get -y install openssl 
 COPY --from=builder /usr/local/lib/* /usr/local/lib/
 COPY --from=builder /tmp/build/install/bin /opt/eosio/bin
 COPY --from=builder /tmp/build/contracts /contracts
-COPY --from=builder /eos/Docker/config.ini /eos/genesis.json /
+COPY --from=builder /eos/genesis.json /
+COPY config.ini /
 COPY start_eosiod.sh /opt/eosio/bin/start_eosiod.sh
 RUN chmod +x /opt/eosio/bin/start_eosiod.sh
 ENV LD_LIBRARY_PATH /usr/local/lib
