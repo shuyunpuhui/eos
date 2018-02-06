@@ -11,5 +11,8 @@ add_subdirectory(test_api)
 #add_subdirectory(storage)
 #add_subdirectory(social)
 
+# add by syph
+add_subdirectory(syb_jianli)
+
 install( DIRECTORY eosiolib DESTINATION include/ )
 install( DIRECTORY skeleton DESTINATION share/ )

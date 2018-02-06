@@ -2,7 +2,13 @@
  *  @file
  *  @copyright defined in eos/LICENSE.txt
  */
-#include <syb_jianli.hpp>
+#include <syb_jianli/syb_jianli.hpp>
+
+namespace SYB_TOKEN_NAME {
+
+}
+
+using namespace SYB_TOKEN_NAME;
 
 /**
  *  The init() and apply() methods must have C calling convention so that the blockchain can lookup and
