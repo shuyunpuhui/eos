@@ -19,7 +19,7 @@ extern "C" {
         if (iterations == 0)
             return 0;
 
-        eosio::print("1 ");
+        eosio::print("\n1 ");
         for (uint64_t i=1; i < iterations; i++) {
             uint64_t res = first + second;
             first = second;
@@ -31,9 +31,12 @@ extern "C" {
     }
 
     void apply(uint64_t code, uint64_t action) {
+        eosio::print("code: ", code,
+                     ", N(shniu): ", N(shniu),
+                     ", action: ", action, "\n");
         if (action == N(compute)) {
             auto message = eosio::current_action<compute>();
-            eosio::print("Calling fib...");
+            eosio::print("Calling fib...\n");
             eosio::print(message.iterations);
             uint64_t num = fibb(message.iterations);
 

@@ -27,6 +27,6 @@ namespace syb_fib {
         uint64_t value;
     };
 
-    using Results = eosio::table<N(syb_fib), N(syb_fib), N(result), result, uint64_t>;
+    using Results = eosio::table<N(shniu), N(shniu), N(result), result, uint64_t>;
 
 }  /// EOS_SYB_FIB

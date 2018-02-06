@@ -4,25 +4,48 @@
       "name": "jianli",
       "base": "",
       "fields": [{
-          "name": "owner",
+          "name": "id",
           "type": "name"
         },{
+          "name": "owner",
+          "type": "string"
+        },{
+          "name": "card_id",
+          "type": "string"
+        },{
           "name": "mobile",
-          "type": "uint64"
+          "type": "string"
+        }
+      ]
+    },{
+      "name": "save",
+      "base": "",
+      "fields": [{
+          "name": "id",
+          "type": "name"
+        },{
+          "name": "owner",
+          "type": "string"
+        },{
+          "name": "card_id",
+          "type": "string"
+        },{
+          "name": "mobile",
+          "type": "string"
         }
       ]
     }
   ],
   "actions": [{
       "name": "save",
-      "type": "jianli"
+      "type": "save"
     }
   ],
   "tables": [{
       "name": "jianli",
       "index_type": "i64",
       "key_names": [
-        "owner"
+        "id"
       ],
       "key_types": [
         "name"
